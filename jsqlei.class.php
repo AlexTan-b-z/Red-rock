@@ -21,8 +21,13 @@ Class JiSuan{
 	static function chu(){
 		$one = $_POST['one'];
 		$two = $_POST['two'];
+		if ($two == 0) {
+			echo "除数不能为0";
+		}
+		else{
 		$jg  = $one / $two;
 		echo $jg;
+	    }
 	}
 }
 $jisuan_1 = new JiSuan;
